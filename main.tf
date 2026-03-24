@@ -13,5 +13,5 @@ provider "aws" {
 
 module "S3_bucket" {
     source = "git::https://github.com/praveenrvchndrn/realtime.git//S3"
-    aws_s3_bucket = "three-tier-devsecops-project-bucket-s3-24055"
+    aws_s3_bucket = "three-tier-devsecops-project-bucket-s3-2405"
 }
