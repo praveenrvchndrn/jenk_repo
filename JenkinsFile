@@ -24,6 +24,12 @@ pipeline {
                 // The -auto-approve flag is required so Jenkins doesn't get stuck waiting for a "yes" prompt
                 sh 'terraform apply -auto-approve tfplan' 
             }
+            
+           stage('Verify Output') {
+            steps {
+                echo 'Reading the generated Terraform output file:'
+                sh 'cat tf_output.txt'
+            }
         }
     }
 }
